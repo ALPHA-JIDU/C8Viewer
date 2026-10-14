@@ -37,7 +37,7 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -139,7 +139,7 @@ fun ChatInfoScreen(
                     }
 
                     Spacer(modifier = Modifier.height(20.dp))
-                    Divider()
+                    HorizontalDivider()
                     Spacer(modifier = Modifier.height(16.dp))
 
                     Text("Pinned Messages (${s.pinnedMessages.size})", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
@@ -159,7 +159,7 @@ fun ChatInfoScreen(
                     }
 
                     Spacer(modifier = Modifier.height(20.dp))
-                    Divider()
+                    HorizontalDivider()
                     Spacer(modifier = Modifier.height(16.dp))
 
                     Text("Shared Media", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
@@ -173,7 +173,7 @@ fun ChatInfoScreen(
                     }
 
                     Spacer(modifier = Modifier.height(20.dp))
-                    Divider()
+                    HorizontalDivider()
                     Spacer(modifier = Modifier.height(16.dp))
 
                     Text("Participants", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
@@ -189,7 +189,7 @@ fun ChatInfoScreen(
                     }
 
                     Spacer(modifier = Modifier.height(20.dp))
-                    Divider()
+                    HorizontalDivider()
                     Spacer(modifier = Modifier.height(16.dp))
 
                     Text("Chat Statistics", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
@@ -200,7 +200,7 @@ fun ChatInfoScreen(
                         Row(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                             Text(sender.name, modifier = Modifier.weight(1f), maxLines = 1, overflow = TextOverflow.Ellipsis)
                             LinearProgressIndicator(
-                                progress = { sender.percentage / 100f },
+                                progress = sender.percentage / 100f,
                                 modifier = Modifier.width(100.dp)
                             )
                             Spacer(modifier = Modifier.width(8.dp))
@@ -230,7 +230,7 @@ fun ChatInfoScreen(
 
                     if (s.callHistory.isNotEmpty()) {
                         Spacer(modifier = Modifier.height(20.dp))
-                        Divider()
+                        HorizontalDivider()
                         Spacer(modifier = Modifier.height(16.dp))
                         Text("Call History (${s.callHistory.size})", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                         s.callHistory.take(5).forEach { call ->
@@ -243,7 +243,7 @@ fun ChatInfoScreen(
                     }
 
                     Spacer(modifier = Modifier.height(24.dp))
-                    Divider()
+                    HorizontalDivider()
                     Spacer(modifier = Modifier.height(16.dp))
 
                     Button(

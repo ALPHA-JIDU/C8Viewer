@@ -117,7 +117,7 @@ fun ChatPickerScreen(
                         )
                         Spacer(modifier = Modifier.height(24.dp))
                         LinearProgressIndicator(
-                            progress = { s.progressPercent / 100f },
+                            progress = s.progressPercent / 100f,
                             modifier = Modifier.fillMaxWidth()
                         )
                         Spacer(modifier = Modifier.height(8.dp))

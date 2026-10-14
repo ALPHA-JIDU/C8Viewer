@@ -1,7 +1,6 @@
 package com.jihad.chatviewer.ui.media
 
 import android.net.Uri
-import androidx.annotation.OptIn
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,9 +24,9 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
+import kotlin.OptIn
 
-@kotlin.OptIn(ExperimentalMaterial3Api::class)
-@OptIn(UnstableApi::class)
+@OptIn(ExperimentalMaterial3Api::class, UnstableApi::class)
 @Composable
 fun VideoPlayerDialog(
     videoUri: Uri,
