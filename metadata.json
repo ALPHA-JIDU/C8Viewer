@@ -1,0 +1,7 @@
+{
+  "name": "Chat Viewer",
+  "description": "Fast, private offline viewer for Meta Messenger exported chat archives",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
